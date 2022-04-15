@@ -11,13 +11,6 @@
   font-size: 10vh;
   padding:5px;
 }
-body{
-  background: url("https://content.sportslogos.net/news/2019/08/utah-jazz-1990s-mountain-logo.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 .scoreboard{
   height:275px;
   width: 425px;
