@@ -2,13 +2,14 @@
   text-align: center;
 }
 .NavBar{
-  background-color: white;
+  /* background-color: white; */
 }
 .title--navBar{
-  background-color: white;
+  /* background-color: white; */
   height: 15vh;
   color: #8033c4;
   font-size: 10vh;
+  padding:5px;
 }
 body{
   background: url("https://content.sportslogos.net/news/2019/08/utah-jazz-1990s-mountain-logo.jpg") no-repeat center center fixed; 
