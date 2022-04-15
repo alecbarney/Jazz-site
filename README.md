@@ -24,3 +24,4 @@ and view their individiual stats, users can also login into the site and add pla
 
 * users table
 * players table
+* watchlist table
