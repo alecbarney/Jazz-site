@@ -18,3 +18,29 @@
   padding: 5px;
   margin:15px;
 }
+.player--pic{
+  height: 100px;
+  width: 125px;
+}
+.PlayerCard{
+  display: flex;
+  background-color: white;
+  color:white;
+ 
+}
+.card--container{
+  background: url('https://preview.redd.it/p3tkstahpxk61.jpg?auto=webp&s=db25a08c5c8bed2e5f3d31a29a1c602f86617a4b');  
+  background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+  height: 350px;
+  width:250px;
+  padding: 15px;
+  color:white;
+
+}
+.card--display{
+  display: flex;
+  padding: 5px;
+  
+}
