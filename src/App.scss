@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); 
+
+body{
+  /* margin-left: 5vw;
+  margin-right: 5vw; */
+  background-color: black;
+  font-family:Inter;
+}
+.App {
+  text-align: center;
+  
+}
+.NavBar{
+  /* background-color: white; */
+  display:flex;
+  justify-content: space-between;
+}
+.title--navBar{
+  /* background-color: white; */
+  height: 15vh;
+  color: #8033c4;
+  font-size: 10vh;
+  padding:5px;
+}
+.scoreboard{
+  height:41vh;
+  width: 33vw;
+  background-color: white;
+  padding: 5px;
+  margin:15px;
+}
+.player--pic{
+  height: 7.5vh;
+  width: 5vw;
+}
+.PlayerCard{
+  display: flex;
+  background-color: white;
+  color:white;
+  font-size: 3vh;
+  height: 26.2vh;
+  width:9.8vw;
+  position: relative;
+}
+.card--container{
+  background: url('https://preview.redd.it/p3tkstahpxk61.jpg?auto=webp&s=db25a08c5c8bed2e5f3d31a29a1c602f86617a4b');  
+  background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .9;
+  height: 26.2vh;
+  width:9.8vw;
+  padding:.75vw;
+
+  margin:1vh;
+  color:white;
+  overflow: hidden;
+  position: relative;
+
+}
+.card--display{
+  /* display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap; */
+  display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(9.8vw, 1fr));
+  padding: 10px;
+
+}
+.score--container{
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+}
+.home-display{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 200px;
+}
+.inner--text{
+  font-size: .6vw;
+}
+.inner--textH{
+  font-size: 1vw;
+}
+.fav--icon{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  display: flex;
+}
+.team--logo{
+height: 12vh;
+
+}
+.gameinfo{
+  margin-top: 4vh;
+}
+.all--games{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+/* footer */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  /* font-family: Roboto; */
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+  position: absolute;
+  bottom:0;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+/* news article */
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-delay($delay) {
+  -webkit-transition-delay: $delay;
+     -moz-transition-delay: $delay;
+      -ms-transition-delay: $delay;
+          transition-delay: $delay;
+}
+body{
+  // font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+}
+.news{
+  display:flex;
+  flex-wrap: wrap;
+  width: 80vh;
+  padding: 15px;
+justify-content: space-between;
+
+}
+.news--a {
+			margin-top: 30px;
+			padding: 0;
+			width: 311px;
+			// height: 400px;
+			display: inline-block;
+			position:relative;
+			letter-spacing: normal;
+			line-height: initial;
+					img {
+					width: 100%;
+					height: auto;
+					float: left;
+					}
+					.news--span {
+					background-color: rgba(0, 0, 0, 0.5);
+					width: 100%;
+					margin-left: -100%;
+					position: absolute;
+					display: inline;
+            height: 206px;
+            z-index: 80;
+					color:#fff;
+					opacity: 0;
+					@include transition( opacity .2s ease-out);
+            @include transition-delay( .25s);
+						&:hover{
+							opacity: 1;
+							@include transition(opacity .2s ease-out);
+						}
+						&:hover .news--p{
+							opacity: 1;
+							bottom: 15px;
+							@include transition( all .2s ease-out);
+							@include transition-delay( .25s);
+						}
+						.news--p{
+							position:absolute;
+							width:100%;
+							text-align: center;
+                 opacity: 0;
+                 bottom: 0;
+                 display: block;
+                 @include transition( all .2s ease-out);
+						}
+				}
+
+		}
+    html{
+      // background-color: #eee;
+  }
+  
+  #slider {
+      max-width: 640px;
+      height: 320px;
+      margin: 20px auto 50px;
+      position: relative;
+  }
+  
+  #slider img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      height:375px;
+    
+      // border: 8px solid #fff;
+      // -moz-border-radius: 3px;
+      // -webkit-border-radius: 3px;
+      // -ms-border-radius: 3px;
+      // -o-border-radius: 3px;
+      // border-radius: 3px;
+  }
+  
+  #slider img:target {
+      opacity: 1;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -ms-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+  }
+  
+  #slider img#five {
+      opacity: 1;
+   }
+  
+  #slider img:not(:target), #slider img:target ~ img#five  {
+    opacity: 0;
+  }
+  
+  
+  /* Navigation */
+  
+  #slider ul{
+    position: absolute;
+    width: 100%;
+    text-align:center;
+    bottom: -65px;
+    padding:0;
+  }
+  
+  #slider ul li {
+    display: inline-block;
+    margin: 0 .5em;
+  }
+  
+  #slider ul li a{
+    margin: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    height: 15px;
+    width: 15px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;  
+    background: #ccc;
+  
+  }
+  
+  #slider ul li a[href="#five"] {
+    /* by default set five to be selected */
+    background: #777;
+  }
+  
+  #one:target ~ ul li a[href="#one"],
+  #two:target ~ ul li a[href="#two"],
+  #three:target ~ ul li a[href="#three"],
+  #four:target ~ ul li a[href="#four"],
+  #five:target ~ ul li a[href="#five"] {
+    /*when #id is the target set the link to change to selected color*/
+    background: #777;
+  }
+  
+  #one:target ~ ul li a[href="#five"],
+  #two:target ~ ul li a[href="#five"],
+  #three:target ~ ul li a[href="#five"],
+  #four:target ~ ul li a[href="#five"]{
+    /*set default selected color of five to change to unselected when any other slide is the target  */
+     background: #ccc;
+  }
+
+  
+  /* CSS */
+  .button-81 {
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-81:hover {
+    background-color: #1e293b;
+    color: #fff;
+  }
+  
+  @media (min-width: 768px) {
+    .button-81 {
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+    }
+  }
